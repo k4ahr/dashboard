@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Dashboard</title>
+    <meta name="description" content="Centralized dashboard for accessing our core services.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <main class="dashboard-container">
+        <header class="dashboard-header">
+            <h1 id="main-heading">Kanazawa's Toolbox</h1>
+            <p>Regain what is ours</p>
+        </header>
+
+        <div class="services-grid-wrapper">
+            <section class="notice-section" id="announcements">
+                <h2><i class="ph ph-info"></i> WAIT THIS IS NOT THE IMAGEBOARD SITE, KOMARI CHAN????</h2>
+                <p><a href="https://komari.site/blog/chan2" style="display: inline;">Click here to read the newest noice
+                        about komari.chan</a></p>
+            </section>
+
+            <section class="services-grid" id="services-grid">
+                <a href="#" class="service-card" id="service-analytics">
+                    <div class="card-icon"><img src="assets/icons/site.ico" alt="Analytics Icon" class="custom-icon">
+                    </div>
+                    <div class="card-content">
+                        <h2>My site</h2>
+                        <p>Personal site about me/Blog posts/Write-ups</p>
+                    </div>
+                    <div class="card-arrow"><i class="ph ph-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="service-card" id="service-database">
+                    <div class="card-icon"><img src="assets/icons/bitwarden.png" alt="Database Icon"
+                            class="custom-icon"></div>
+                    <div class="card-content">
+                        <h2>VaultWarden <i class="ph ph-lock-key private-icon" title="Private"></i></h2>
+                        <p>Self-hosted password manager</p>
+                    </div>
+                    <div class="card-arrow"><i class="ph ph-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="service-card" id="service-storage">
+                    <div class="card-icon"><img src="assets/icons/searxng.png" alt="Storage Icon" class="custom-icon">
+                    </div>
+                    <div class="card-content">
+                        <h2>SearXNG</h2>
+                        <p>Self-hosted search engine</p>
+                    </div>
+                    <div class="card-arrow"><i class="ph ph-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="service-card" id="service-settings">
+                    <div class="card-icon"><img src="assets/icon-placeholder.png" alt="Settings Icon"
+                            class="custom-icon"></div>
+                    <div class="card-content">
+                        <h2>Settings <i class="ph ph-lock-key private-icon" title="Private"></i></h2>
+                        <p>System configuration and preferences</p>
+                    </div>
+                    <div class="card-arrow"><i class="ph ph-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="service-card" id="service-users">
+                    <div class="card-icon"><img src="assets/icon-placeholder.png" alt="Users Icon" class="custom-icon">
+                    </div>
+                    <div class="card-content">
+                        <h2>User Management</h2>
+                        <p>Roles, permissions, and accounts</p>
+                    </div>
+                    <div class="card-arrow"><i class="ph ph-arrow-right"></i></div>
+                </a>
+
+                <a href="#" class="service-card" id="service-monitoring">
+                    <div class="card-icon"><img src="assets/icon-placeholder.png" alt="Monitoring Icon"
+                            class="custom-icon"></div>
+                    <div class="card-content">
+                        <h2>Monitoring</h2>
+                        <p>System health, logs, and alerts</p>
+                    </div>
+                    <div class="card-arrow"><i class="ph ph-arrow-right"></i></div>
+                </a>
+            </section>
+
+            <section class="annotations-section" id="annotations">
+                <h2><i class="ph ph-lock-key private-icon"></i>Private services that are not open for public access
+                </h2>
+            </section>
+        </div>
+    </main>
+    <footer class="dashboard-footer">
+
+        <img src="assets/footer.jpg" alt="Footer Banner" class="footer-image">
+        <p>Made by <a href="https://me.komari.site">@K4ahr</a> - Art by <a
+                href="https://x.com/lililjiliijili">@tsukumizu</a></p>
+    </footer>
+</body>
+
+</html>

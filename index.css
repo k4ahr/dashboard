@@ -1,0 +1,243 @@
+:root {
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --card-bg: rgba(0, 0, 0, 0.4);
+    --card-border: rgba(255, 255, 255, 0.2);
+    --font-family: monospace, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 0 !important;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: #000;
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Layout */
+.dashboard-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.dashboard-header {
+    text-align: left;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--text-primary);
+    padding-bottom: 1rem;
+    /* Header 0% background blur */
+    background: transparent;
+    backdrop-filter: none;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.dashboard-header p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+/* Grid Wrapper with Blur */
+.services-grid-wrapper {
+    /* Dim/blur for the body content */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 2rem;
+}
+
+/* Notice Section */
+.notice-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--text-primary);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.notice-section h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.notice-section p a {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+/* Annotation Section */
+.annotations-section {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--text-primary);
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+}
+
+.annotations-section h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+/* Cards */
+.service-card {
+    background: var(--card-bg);
+    border: 2px solid var(--card-border);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.service-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #000;
+    flex-shrink: 0;
+}
+
+.custom-icon {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card-content h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.private-icon {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-left: 0.5rem;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.card-arrow {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+}
+
+/* Footer */
+.dashboard-footer {
+    background-color: #333333;
+    /* Solid grayscale color */
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+}
+
+.dashboard-footer a {
+    color: #ffffff;
+}
+
+.footer-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem auto;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    .dashboard-container {
+        padding: 1rem;
+    }
+
+    .services-grid-wrapper {
+        padding: 1rem;
+    }
+
+    .dashboard-header h1 {
+        font-size: 2rem;
+    }
+
+    /* Stack the button links vertically on phone screens */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    /* Adjust the card links padding and text sizes to fit perfectly */
+    .service-card {
+        padding: 1rem;
+        gap: 0.75rem;
+    }
+
+    .card-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 1.25rem;
+    }
+
+    .card-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .card-content p {
+        font-size: 0.85rem;
+    }
+
+    .card-arrow {
+        font-size: 1.25rem;
+    }
+}
