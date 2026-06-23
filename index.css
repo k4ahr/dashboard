@@ -53,9 +53,31 @@ body {
 
 .dashboard-header p {
     font-size: 1rem;
-    color: var(--text-secondary);
+    color: black;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
+
+.menu-navigation {
+        /* Dim/blur for the body content */
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 0.625rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-navigation ul a {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    display:inline;
+}
+
+
 
 /* Grid Wrapper with Blur */
 .services-grid-wrapper {
@@ -195,6 +217,33 @@ body {
     height: auto;
     display: block;
     margin: 0 auto 1rem auto;
+}
+
+/* Registration */
+.registration {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--text-primary);
+    padding: 1rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.registration h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.registration p a {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.registration ul {
+    padding: 1rem;
 }
 
 /* Mobile Responsive */
