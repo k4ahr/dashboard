@@ -49,8 +49,24 @@
     <footer class="dashboard-footer">
 
         <img src="assets/footer.jpg" alt="Footer Banner" class="footer-image">
-        <p>Made by <a href="https://me.komari.site">@K4ahr</a> - Art by <a
-                href="https://x.com/lililjiliijili">@tsukumizu</a></p>
+        <p>Made by <a href="https://me.komari.site">@K4ahr</a> - Art by <a href="https://x.com/lililjiliijili">@tsukumizu</a></p>
+        <img id="moe-image" alt="Moe">
+
+        <script>
+            document.addEventListener("DOMContentLoaded", async () => {
+                try {
+                    const response = await fetch("https://me.komari.site/moe.json");
+                    const data = await response.json();
+                    if (data?.urls?.length) {
+                        const randomUrl = data.urls[Math.floor(Math.random() * data.urls.length)];
+                        document.getElementById("moe-image").src = randomUrl;
+                    }
+                } catch (error) {
+                    console.error("Failed to load moe image:", error);
+                }
+            });
+        </script>
+        <p>Made by <a href="https://me.komari.site">@K4ahr</a> - Art by <a href="https://x.com/lililjiliijili">@tsukumizu</a></p>
     </footer>
 </body>
 

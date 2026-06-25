@@ -86,10 +86,10 @@
                 </a>
 
                 <a href="#" class="service-card">
-                    <div class="card-icon"><img src="?" alt="?" class="custom-icon"></div>
+                    <div class="card-icon"><img src="assets/icons/nginx.png" class="custom-icon"></div>
                     <div class="card-content">
-                        <h2>Placeholder</h2>
-                        <p>More to come</p>
+                        <h2>Nginx Manager <i class="ph ph-lock-key private-icon"></i></h2>
+                        <p>Reverse Proxies manager</p>
                     </div>
                     <div class="card-arrow"><i class="ph ph-arrow-right"></i></div>
                 </a>
@@ -103,8 +103,23 @@
     <footer class="dashboard-footer">
 
         <img src="assets/footer.jpg" alt="Footer Banner" class="footer-image">
-        <p>Made by <a href="https://me.komari.site">@K4ahr</a> - Art by <a
-                href="https://x.com/lililjiliijili">@tsukumizu</a></p>
+        <p>Made by <a href="https://me.komari.site">@K4ahr</a> - Art by <a href="https://x.com/lililjiliijili">@tsukumizu</a></p>
+        <img id="moe-image" alt="Moe">
+
+        <script>
+            document.addEventListener("DOMContentLoaded", async () => {
+                try {
+                    const response = await fetch("https://me.komari.site/moe.json");
+                    const data = await response.json();
+                    if (data?.urls?.length) {
+                        const randomUrl = data.urls[Math.floor(Math.random() * data.urls.length)];
+                        document.getElementById("moe-image").src = randomUrl;
+                    }
+                } catch (error) {
+                    console.error("Failed to load moe image:", error);
+                }
+            });
+        </script>
     </footer>
 </body>
 
